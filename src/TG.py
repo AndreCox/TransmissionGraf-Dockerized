@@ -21,6 +21,7 @@ import datetime
 import pygeohash as pgh 
 import config
 import logging
+
 ##Above -- Imports
 
 logging.basicConfig(filename=str(config.TransmissionGrafFolder) + 'TG.log',level=logging.INFO)

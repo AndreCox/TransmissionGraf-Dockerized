@@ -23,4 +23,5 @@ RUN mkdir -p Scripts/TransmissionGraf
 
 COPY src .
 COPY GeoLite2-City.mmdb Scripts/TransmissionGraf
-CMD ["python3", "TG.py"]
+
+CMD ["python", "main.py"]
