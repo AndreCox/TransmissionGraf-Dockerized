@@ -8,7 +8,7 @@
 #V0.03 - Plans to add Leech/Peer Ratio
 #Dont really know what Im doing but here you go! 
 
-
+import math
 import os
 import re
 import sys
@@ -203,6 +203,7 @@ for line in lines:
     Uploaded = str(lines[17])[12:-1]
     Ratio = str(lines[18])[8:-1]
     DownloadTime = str(lines[26])[1:-1]
+
     #days,hrs,se
     ##Printing Results
     f2.close()
@@ -229,9 +230,15 @@ for line in lines:
         TotalSize = str("0.00 MB")
     else:
         mymatch1 = re.search(r'\((.+)\)',TotalSize) 
-        WantedSize = str(mymatch1.group(0))[1:-11]
-        
-        print ("Wanted Size :" + str(WantedSize))
+        # check if the value is not None
+        if mymatch1 is not None:
+            WantedSize = str(mymatch1.group(0))[1:-11]
+            print ("Wanted Size :" + str(WantedSize))
+        else: 
+            WantedSize = str("0.00")
+
+
+
     print ("Downloaded :" + str(Downloaded))
     print ("Uploaded :" + str(Uploaded))
     if Uploaded[:4] == ("None"):
@@ -318,6 +325,9 @@ for line in lines:
         KBsUploaded = float(UploadedNumber)*1
     print ("KB Uploaded :" + str(KBsUploaded))
     IPercent = float(Percent)
+    # check to make sure the value is not nan
+    if math.isnan(IPercent):
+        IPercent = float(0.00)
     print ("Influx Percent" + str(IPercent))
     ##End of Loop
     time.sleep(.2)
