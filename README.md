@@ -1,16 +1,12 @@
-TransmissionGraf is a script which provides transmission-daemon info to InfluxDB  
+# TransmissionGraf Dockerized
+Is a program which provides transmission-daemon info to InfluxDB  
 
-you will need to obtain your own 'GeoLite2-City.mmdb' and place it in TranmsissionGraf Folder. 
-https://dev.maxmind.com/geoip/geoip2/geolite2/  
+The original script was made by [@Festeazy](https://github.com/Festeazy/TransmissionGraf) I have taken the script and updated it to run in a Docker Container as well as fixing a couple minor bugs that would cause a program crash.   
 
-Currently set to run from home dir but can be configured differently
 
-Requires remote command line connection to transmission-deamon (with username/password) and influxdb   
-Run TransmissionGraf/TGsetup.sh to install requirements  
-Update TranmissionGraf/config.py with your personalized settings for influx and transmission-daemon  
-Run TG.py using python3  
 ![image](https://user-images.githubusercontent.com/65983438/82976070-c4e44000-9fa3-11ea-862a-5003606e5fc5.png)
 ![TransGraf](https://user-images.githubusercontent.com/65983438/83154918-4c29d480-a0c6-11ea-9278-03c4e04c6c86.png)
 
 
 Released May 29th 2020! 
+Updated October 30th 2022! 
