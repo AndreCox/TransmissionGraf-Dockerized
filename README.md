@@ -1,7 +1,7 @@
 # TransmissionGraf Dockerized
 Is a program which provides transmission-daemon info to InfluxDB  
 
-The original script was made by [@Festeazy](https://github.com/Festeazy/TransmissionGraf) I have taken the script and updated it to run in a Docker Container as well as fixing a couple minor bugs that would cause a program crash.   
+The original script was made by [@Festeazy](https://github.com/Festeazy/TransmissionGraf) I have taken the script and updated it to run in a Docker Container as well as fixing a couple minor bugs that would cause a program crash. You can find the link to the docker file [here!](https://hub.docker.com/repository/docker/andrerc1/transmission-graf)
 
 ## Installation
 You can run this program from the command line or via docker compose.
